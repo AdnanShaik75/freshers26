@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cosmic Odyssey '26 | Department of Physics</title>
+<style>
+:root{--navy:#101820;--navy2:#17232c;--cream:#f4e5c7;--moon:#d9c9a8;--orange:#d85f35;--red:#a9432b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--cream);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+.container{width:min(1180px,calc(100% - 32px));margin:auto}.mono{font-family:"Courier New",monospace}.eyebrow{font-size:10px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--orange)}
+nav{border-bottom:1px solid #f4e5c733;background:#101820ee;position:relative;z-index:10}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:12px;align-items:center}.mark{width:43px;height:43px;border:2px solid var(--orange);border-radius:50%;display:grid;place-items:center}.links{display:flex;gap:30px;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.links a:hover{color:var(--orange)}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:12px;padding:14px 21px;border:2px solid var(--cream);font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;transition:.2s}.btn:hover{background:var(--cream);color:var(--navy)}.primary{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+.hero{min-height:calc(100vh - 78px);position:relative;overflow:hidden;display:flex;align-items:center}.hero:before{content:"";position:absolute;width:min(1000px,110vw);height:600px;border:1px solid #d85f3566;border-radius:50%;left:50%;top:48%;transform:translate(-50%,-50%) rotate(-13deg)}.hero:after{content:"";position:absolute;width:min(850px,100vw);height:460px;border:1px solid #f4e5c72b;border-radius:50%;left:50%;top:48%;transform:translate(-50%,-50%) rotate(12deg)}
+.stars{position:absolute;inset:0}.stars i{position:absolute;font-style:normal}.s1{left:8%;top:18%;font-size:22px}.s2{left:20%;top:33%}.s3{left:13%;top:67%}.s4{left:35%;top:14%}.s5{right:18%;top:19%;font-size:20px}.s6{right:8%;top:48%}.s7{right:25%;top:72%;font-size:17px}
+.moon{position:absolute;right:-110px;top:90px;width:560px;height:560px;border-radius:50%;background:var(--moon);border:10px solid #d85f354d}.cr{position:absolute;border-radius:50%;background:#a99c8370}.c1{left:22%;top:24%;width:65px;height:65px}.c2{left:58%;top:18%;width:42px;height:42px}.c3{left:42%;top:58%;width:95px;height:95px}.c4{left:70%;top:68%;width:55px;height:55px}
+.content{position:relative;z-index:5;padding:80px 0 110px}.status{display:inline-flex;gap:9px;align-items:center;border:1px solid #f4e5c74d;padding:9px 13px;background:#101820aa;font:700 10px "Courier New";letter-spacing:.15em;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--orange)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;text-transform:uppercase}h1{font-size:clamp(65px,11vw,140px);line-height:.8;letter-spacing:-.055em;margin:15px 0}h1 span,h2 span{color:var(--orange)}.date{border-left:4px solid var(--orange);padding-left:13px;margin:25px 0}.date small{display:block;color:#f4e5c780;font:700 10px "Courier New";letter-spacing:.18em;text-transform:uppercase}.date strong{font-size:20px}.lead{max-width:520px;color:#f4e5c7aa;line-height:1.7}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.strip{position:absolute;bottom:0;left:0;right:0;border-top:1px solid #f4e5c733;background:#101820ee}.stripin{display:flex;justify-content:space-between;padding:14px 0;color:#f4e5c780;font:700 9px "Courier New";letter-spacing:.18em;text-transform:uppercase}
+section{position:relative}.count{background:var(--moon);color:var(--navy);padding:75px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}.head h2{font-size:clamp(45px,6vw,75px);line-height:.9;margin:8px 0}.note{max-width:390px;font:10px/1.7 "Courier New";text-transform:uppercase;color:#10182099}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.counter{border:2px solid var(--navy);padding:22px}.num{font:900 clamp(38px,6vw,70px) "Courier New"}.label{font-size:9px;font-weight:900;letter-spacing:.2em;text-transform:uppercase;margin-top:7px}
+.events{padding:105px 0}.card{border:1px solid #f4e5c733;min-height:255px;padding:23px;display:flex;flex-direction:column;transition:.2s}.card:hover{transform:translateY(-5px);border-color:var(--orange)}.mission{font:10px 700 "Courier New";letter-spacing:.18em;color:var(--orange)}.icon{align-self:flex-end;font-size:27px;color:#f4e5c780}.card h3{font-size:24px;margin-top:auto;margin-bottom:18px}.card a{font-size:9px;font-weight:900;letter-spacing:.18em;border-bottom:1px solid #f4e5c766;width:max-content;padding-bottom:5px}
+.about{background:var(--navy2);border-top:1px solid #f4e5c733;padding:105px 0}.aboutgrid{display:grid;grid-template-columns:320px 1fr;gap:80px;align-items:center}.patch{width:290px;height:290px;border:4px solid var(--orange);border-radius:50%;padding:17px;margin:auto}.patchin{height:100%;border:1px solid #f4e5c744;border-radius:50%;display:grid;place-items:center;text-align:center}.patchbig{font:900 66px Georgia;line-height:.75}.about p{font-size:17px;line-height:1.8;color:#f4e5c7aa;max-width:700px}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:25px;border-top:1px solid #f4e5c733;margin-top:25px;padding-top:25px}.facts strong{font:700 23px "Courier New"}.facts small{display:block;color:#f4e5c766;font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin-top:5px}
+.cta{background:var(--orange);color:var(--navy);padding:105px 20px;text-align:center}.cta h2{font-size:clamp(55px,9vw,110px);line-height:.88;margin:12px 0}.cta p{max-width:550px;margin:22px auto;line-height:1.7;color:#101820b3}.cta .btn{border-color:var(--navy);color:var(--navy)}.cta .btn:hover{background:var(--navy);color:var(--cream)}
+footer{border-top:1px solid #f4e5c733;padding:32px 0}.foot{display:flex;justify-content:space-between;gap:20px}.ft{font:900 24px Georgia;text-transform:uppercase}.fs{font:9px "Courier New";letter-spacing:.18em;color:#f4e5c766;text-transform:uppercase;margin-top:7px}
+@media(max-width:900px){.links{display:none}.moon{width:390px;height:390px;right:-150px}.grid4{grid-template-columns:repeat(2,1fr)}.aboutgrid{grid-template-columns:1fr;gap:50px}.head{display:block}.note{margin-top:18px}}
+@media(max-width:560px){.moon{width:300px;height:300px;right:-150px;top:130px}.content{padding-top:65px}.hero h1{font-size:65px}.grid4{grid-template-columns:1fr}.events,.about{padding:80px 0}.patch{width:235px;height:235px}.foot{display:block}.foot .fs:last-child{margin-top:18px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+<a class="brand" href="#"><div class="mark">✦</div><div><div class="eyebrow">Department of Physics</div><div class="mono" style="font-size:12px;font-weight:800;letter-spacing:.2em">CUTN</div></div></a>
+<div class="links"><a href="#mission">Mission</a><a href="#events">Events</a><a href="#about">About</a></div>
+<a class="btn" href="#register" style="padding:10px 14px">Register</a>
+</div></nav>
+
+<section class="hero">
+<div class="stars"><i class="s1">✦</i><i class="s2">✦</i><i class="s3">✦</i><i class="s4">✦</i><i class="s5">✦</i><i class="s6">✦</i><i class="s7">✦</i></div>
+<div class="moon"><div class="cr c1"></div><div class="cr c2"></div><div class="cr c3"></div><div class="cr c4"></div></div>
+<div class="container content">
+<div class="status"><span class="dot"></span>Mission Status: Preparing for Launch</div>
+<div class="eyebrow" style="margin-top:24px">Central University of Tamil Nadu</div>
+<div class="mono" style="font-size:11px;letter-spacing:.23em;color:#f4e5c780;margin-top:8px">Department of Physics Presents</div>
+<h1>Cosmic<br><span>Odyssey</span></h1>
+<div class="date"><small>Mission Date</small><strong>23 September 2026</strong></div>
+<p class="lead">A new batch. A new orbit.<br>One night beyond the ordinary.</p>
+<div class="actions" id="register"><a class="btn primary" href="#events">Cultural Registration →</a><a class="btn" href="#food">Get Food Token ↗</a></div>
+</div>
+<div class="strip"><div class="container stripin"><span>Mission: CO-26</span><span>Physics • People • Possibilities</span><span>Status: T−0</span></div></div>
+</section>
+
+<section id="mission" class="count"><div class="container">
+<div class="head"><div><div class="eyebrow" style="color:var(--red)">Mission Countdown</div><h2>Until Launch</h2></div><div class="note">All systems are being prepared for the arrival of a new batch into the Physics Department.</div></div>
+<div class="grid4"><div class="counter"><div class="num" id="days">00</div><div class="label">Days</div></div><div class="counter"><div class="num" id="hours">00</div><div class="label">Hours</div></div><div class="counter"><div class="num" id="minutes">00</div><div class="label">Minutes</div></div><div class="counter"><div class="num" id="seconds">00</div><div class="label">Seconds</div></div></div>
+</div></section>
+
+<section id="events" class="events"><div class="container">
+<div class="head"><div><div class="eyebrow">Mission Activities</div><h2>Cultural<br>Events</h2></div><div class="note" style="color:#f4e5c766">Step out of the laboratory. Enter the orbit. Choose your mission.</div></div>
+<div class="grid4">
+<article class="card"><span class="mission">MISSION 01</span><span class="icon">◒</span><h3>Cosmic Ramp Walk</h3><a href="#register">Register →</a></article>
+<article class="card"><span class="mission">MISSION 02</span><span class="icon">♫</span><h3>Stellar Voices</h3><a href="#register">Register →</a></article>
+<article class="card"><span class="mission">MISSION 03</span><span class="icon">✦</span><h3>Zero Gravity Dance</h3><a href="#register">Register →</a></article>
+<article class="card"><span class="mission">MISSION 04</span><span class="icon">∑</span><h3>Quantum Quiz</h3><a href="#register">Register →</a></article>
+</div></div></section>
+
+<section id="about" class="about"><div class="container aboutgrid">
+<div class="patch"><div class="patchin"><div><div class="mono" style="font-size:8px;letter-spacing:.28em">PHYSICS DEPARTMENT</div><div class="patchbig">CO<br>'26</div><div class="mono" style="font-size:8px;letter-spacing:.2em;color:var(--orange);margin-top:18px">NEW UNIVERSE</div></div></div></div>
+<div><div class="eyebrow">Mission Briefing</div><h2>Same People.<br><span>New Universe.</span></h2><p>Cosmic Odyssey '26 is the Department of Physics fresher's celebration at the Central University of Tamil Nadu. A night of culture, music, creativity and new beginnings.</p><div class="facts"><div><strong>23.09.26</strong><small>Launch Date</small></div><div><strong>CUTN</strong><small>Mission Base</small></div></div></div>
+</div></section>
+
+<section id="food" class="cta"><div class="eyebrow" style="color:var(--navy)">Final Transmission</div><h2>Ready for<br>Launch?</h2><p>Register for the cultural missions or secure your food token before the countdown reaches zero.</p><div class="actions" style="justify-content:center"><a class="btn" href="#register">Cultural Registration</a><a class="btn" href="#food">Food Token</a></div></section>
+
+<footer><div class="container foot"><div><div class="ft">Cosmic Odyssey '26</div><div class="fs">Department of Physics • CUTN</div></div><div class="fs">Physics • People • Possibilities</div></div></footer>
+
+<script>
+const target=new Date("2026-09-23T18:00:00").getTime();
+function tick(){let d=Math.max(0,target-Date.now());let vals=[Math.floor(d/86400000),Math.floor(d/3600000)%24,Math.floor(d/60000)%60,Math.floor(d/1000)%60];["days","hours","minutes","seconds"].forEach((id,i)=>document.getElementById(id).textContent=String(vals[i]).padStart(2,"0"))}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
